@@ -1,12 +1,15 @@
 # sigari.bio
 
-Pagina di login e dashboard Appearance in un unico file HTML.
+Landing page, pagina di login e dashboard, ognuna in un unico file HTML.
 
 ## Struttura
 
 ```
 sigari-bio/
-├── index.html        App completa (login, dashboard, anteprima live)
+├── index.html        Landing page (hero WebGL con 3 mood, @ di particelle, catalogo feature, anteprima profilo, FAQ)
+├── login.html        Login e registrazione (accetta ?handle=nome e ?mode=login)
+├── dashboard.html    Dashboard con anteprima live
+├── FEATURES.md       Catalogo di tutte le feature (live / in arrivo) dai concorrenti
 ├── firestore.rules   Regole di sicurezza Firestore
 └── README.md         Questo file
 ```
@@ -19,7 +22,7 @@ sigari-bio/
    - In **Settings > Authorized domains** aggiungi `localhost` e il tuo dominio di produzione.
 2. **Discord (opzionale)**
    - Aggiungi un provider OpenID Connect con ID `oidc.discord`, issuer `https://discord.com`, scope `identify email`.
-   - Quando è pronto imposta `DISCORD_ENABLED = true` in `index.html`.
+   - Quando è pronto imposta `DISCORD_ENABLED = true` in `login.html`.
 3. **Firestore > Rules**: incolla il contenuto di `firestore.rules` e pubblica.
 4. **Google Cloud Console > Credenziali**: limita la API key ai domini in cui gira il sito.
 
